@@ -1,0 +1,49 @@
+.App {
+  min-height: 100vh;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+.search-form {
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-input {
+  width: 50%;
+  border: 1px solid pink;
+  border-radius: 2rem;
+  padding: 1rem;
+  outline: none;
+  color: black;
+  font-size: 1.4rem;
+  &:focus {
+    border-color: #a6c0fe;
+  }
+}
+button {
+  @include size(8rem, 4rem);
+  margin-left: 2rem;
+}
+.search-button {
+  border: none;
+  border-radius: 2rem;
+  background-color: #fbc2eb;
+  outline: none;
+  font-size: 1.4rem;
+  color: rgb(38, 32, 32);
+  cursor: pointer;
+  &:hover {
+    background-color: #f5576c;
+    color: white;
+    transition: all 0.25s linear;
+  }
+}
+.recipe {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
